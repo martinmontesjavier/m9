@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR5</title>
+    <style>
+        header{
+            background-color: antiquewhite;
+            min-height: 300px;
+        }
+        main{
+            background-color: aquamarine;
+            min-height: 300px;
+        }
+        footer{
+            background-color: slategray;
+            min-height: 300px;
+        }
+        .monigote{
+            position: absolute;
+            right: 200px;
+            bottom:30px;
+            transform: rotate(-20deg);
+            /* visibility: hidden; */
+            transition: all 0.3s ease;
+            visibility: hidden;
+            animation: mover-monigote 5s infinite linear alternate-reverse;
+        }
+
+
+        @keyframes mover-monigote{   
+            0%{
+                visibility: visible;
+                bottom:700px;
+            }
+            25%{
+                bottom:500px;
+            }
+            50%{
+                bottom:300px;
+            }
+            75%{
+                bottom:100px;
+                transform: rotate(360deg);
+            }
+            100%{
+                bottom:0px;
+                transform: rotateY(180deg); 
+            }
+        }
+        
+        .monigote P{
+            visibility: hidden;
+        }
+
+        footer:hover .monigote{
+            transition: all 0.7s ease;
+            bottom:300px;
+            visibility: visible;
+        }
+
+        .monigote:hover {
+            transform: rotateY(180deg); 
+        }
+
+        .monigote:hover p{
+            visibility: visible;
+            transform: rotateY(180deg);
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header></header>
+    <main></main>
+    <footer>
+        <div class="monigote">
+            <p>JOSE MANUEL TORRES</p>
+            <img width="300px" src="imagenes/monigote.png" alt="monigote">
+        </div>
+    </footer>
+</body>
+</html>
